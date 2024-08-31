@@ -25,7 +25,7 @@ public class NoTreeToDestory {
         ItemStack heldItem = player.getMainHandItem();
 
         if ((block.defaultBlockState().is(BlockTags.LOGS) || block.defaultBlockState().is(BlockTags.PLANKS))
-                && !(heldItem.getItem() instanceof AxeItem)) {
+                && (!player.getAbilities().instabuild) && !(heldItem.getItem() instanceof AxeItem)) {
             event.setCanceled(true);
         }
     }
