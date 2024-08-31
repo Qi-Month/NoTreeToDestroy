@@ -1,9 +1,6 @@
 {
     "pack": {
         "pack_format": 15,
-        "description": {
-            "zh_cn": "这个Mod可以让你在没有斧子的时候无法破坏木头",
-            "en_us": "This Mod prevents you from destroying wood without an axe"
-        }
+        "description": "This Mod prevents you from destroying wood without an axe"
     }
 }
