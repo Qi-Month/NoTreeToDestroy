@@ -1,0 +1,22 @@
+modLoader = "javafml"
+loaderVersion = "${loader_version_range}"
+license = "${mod_license}"
+logoFile = "pack.png"
+[[mods]]
+modId = "notreedestory"
+version = "1.0.0"
+displayName = "No Tree To Destory"
+authors = "Qi Month"
+description = '''This Mod prevents you from destroying wood without an axe'''
+[[dependencies.notreedestory]]
+modId = "forge"
+mandatory = true
+versionRange = "${forge_version_range}"
+ordering = "NONE"
+side = "BOTH"
+[[dependencies.notreedestory]]
+modId = "minecraft"
+mandatory = true
+versionRange = "${minecraft_version_range}"
+ordering = "NONE"
+side = "BOTH"
