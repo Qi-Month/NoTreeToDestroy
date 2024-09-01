@@ -1,4 +1,4 @@
-package com.QiMonth.notreedestory;
+package com.qimonth.notreedestory;
 
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.entity.player.Player;
@@ -24,7 +24,10 @@ public class NoTreeToDestory {
         Block block = event.getLevel().getBlockState(event.getPos()).getBlock();
         ItemStack heldItem = player.getMainHandItem();
 
-        if ((block.defaultBlockState().is(BlockTags.LOGS) || block.defaultBlockState().is(BlockTags.PLANKS))
+        // 判断方块方块是否为木头或木板
+        if ((block.defaultBlockState().is(BlockTags.LOGS)
+                || block.defaultBlockState().is(BlockTags.PLANKS))
+                // 如果玩家没有使用斧头，则取消破坏方块(并且有添加创造模式判断)
                 && (!player.getAbilities().instabuild) && !(heldItem.getItem() instanceof AxeItem)) {
             event.setCanceled(true);
         }
